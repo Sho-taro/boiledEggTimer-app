@@ -21,3 +21,4 @@ Dockerfile
 php.ini
 start-container
 supervisord.conf
+index.blade copy.php
