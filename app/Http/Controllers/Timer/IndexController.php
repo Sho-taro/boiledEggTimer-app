@@ -28,7 +28,7 @@ class IndexController extends Controller
         $eggInfo->numCounter = $newNumCounter;
         $eggInfo->save();
 
-        $newNumCounter = str_pad((string)$newNumCounter, 6, '0', STR_PAD_LEFT);
+        $newNumCounter = str_pad((string)$newNumCounter, 5, '0', STR_PAD_LEFT);
 
         return view('timer.index')
             ->with('eggNum', $eggNum)

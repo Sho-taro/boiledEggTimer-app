@@ -9,10 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&family=Oxanium:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/home.js" defer></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="/css/style.css">
+    {{ $script }}
 </head>
 <body>
-    {{ $slot }}
+    <div class="sm:py-12 text-gray-700 bg-gray-200 min-h-screen">
+        {{ $slot }}
+    </div>
 </body>
 </html>

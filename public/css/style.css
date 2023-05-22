@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* 
+Base
+*/
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* セレクトボックスの装飾 */
+select {
+    -moz-appearance: menulist-button;
+    -webkit-appearance: menulist-button;
+    appearance: menulist-button;
+    border: 1px solid #777;
+    border-radius: .1rem;
+}
+
+/* 個数カウンターのフォントを指定 */
+span.num-counter {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Oxanium', cursive;
+}
