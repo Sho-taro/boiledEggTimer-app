@@ -1,0 +1,365 @@
+@charset "UTF-8";
+
+/* 
+Base
+*/
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+}
+img {
+    border-radius: 1rem;
+}
+select {
+    -moz-appearance: menulist-button;
+    -webkit-appearance: menulist-button;
+    appearance: menulist-button;
+    border: 1px solid #777;
+    border-radius: .1rem;
+}
+button {
+    color: #fff;
+    background-color: #999;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+}
+
+/* 
+header
+*/
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(234, 184, 7, .26);
+    /* background-image: linear-gradient(rgba(234, 184, 7, .26), rgba(255, 255, 255, 1)); */
+    height: 8vh;
+    padding: 10px 1rem 0;
+    margin-bottom: 50px;
+}
+.logo-header svg,
+.logo-header h1 {
+    display: inline-block;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+.logo-header h1 {
+    font-size: 1.6rem;
+}
+.btn-header button {
+    display: inline-block;
+    margin-top: 5px;
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+
+/*
+gallery
+*/
+
+.gallery-desc {
+    text-align: center;
+    margin: 0 0 30px;
+}
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+/* .flex-container .gallery div {
+} */
+.gallery-img img {
+    width: 200px;
+    object-fit: cover;
+}
+.img-text {
+    margin-top: 5px;
+    margin-left: 10px;
+    min-width: 130px;
+}
+.img-text p {
+color: #777;
+}
+.img-text p {
+    font-size: 10px;
+}
+span.num-counter {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-family: 'Oxanium', cursive;
+}
+
+/*
+モーダルウィンドウ
+*/
+#modal {
+    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+    position: fixed;
+    inset: 0;
+    width: 80vw;
+    max-width: 500px;
+    max-height: 80vh;
+    margin: 4rem auto;
+    padding: 3rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-desc {
+    background-color: rgb(255, 228, 196);
+    border-radius: 1rem;
+    padding: 2rem 0 .5rem;
+    margin-bottom: 1rem;
+}
+.modal-desc img {
+    width: 75%;
+    object-fit: cover;
+}
+.modal-desc h2 {
+    font-weight: bold;
+}
+.modal-desc p {
+    background-color: rgb(255, 228, 196);
+    margin: .5rem 1rem;
+    border-radius: 1rem;
+
+}
+/* #modal form {} */
+#modal .botton-container{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+/* #btn-back {} */
+#btn-next {
+    font-weight: bold;
+    background-color: rgba(254, 220, 140, 1);
+    width: 50%;
+    margin-left: 1rem;
+}
+#mask {
+    background-color: rgba(0, 0, 0, .75);
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*
+cooking.php
+*/
+
+/*
+feature*/
+.feature {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    /* border-bottom: rgba(217, 217, 217, .6) 8px solid; */
+}
+/* .feature-item {} */
+.feature-item img {
+    width: 150px;
+    object-fit: cover;
+}
+.feature-item h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.2rem;
+}
+
+.feature-cookinginfo {
+    max-width: 50%;
+    padding: 2rem 0 2rem 1.5rem;
+}
+.feature-cookinginfo p {
+    font-size: 1.2rem;
+}
+.feature-cookinginfo strong {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+/* .feature-cookinginfo span {} */
+
+
+/*
+recipe
+*/
+.recipe.container {
+    width: 90%;
+    border-top: rgba(217, 217, 217, .6) 8px solid;
+    /* border-bottom: rgba(217, 217, 217, .6) 8px solid; */
+
+}
+.recipe-note {
+    text-align: center;
+    background-color: rgba(254, 220, 140, 1);
+    border-radius: 1rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.recipe-top {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+.recipe-contents {
+    margin: 0 auto 100px;
+}
+.recipe-item {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: rgba(217, 217, 217, .6) 2px solid;
+}
+.recipe-item ol {
+    padding-top: 5px;
+    width: 45%;
+}
+.recipe-item img {
+    width: 40%;
+    margin-left: 10px;
+}
+#btn-confirm {
+    display: block;
+    margin: 30px auto 0;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(254, 220, 140, 1);
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    /* padding: 1rem; */
+    border-radius: 50%;
+    box-shadow: 10px 8px 4px #ccc;
+}
+
+/*
+タイマー
+*/
+.timer-container {
+    text-align: center;
+    margin-top: 8rem;
+    /* display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(254, 220, 140, 1);
+    border-radius: .5rem;
+    box-shadow: 2px -2px 10px #999;
+    position: fixed;
+    bottom: 2px; */
+}
+/* #timer-min,
+#timer-sec {
+    font-size: 2rem;
+    font-weight: bolder;
+} */
+.timer-container p {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+/* #btn-timer {} */
+button#btn-timer {
+    background-color: transparent;
+}
+#btn-timer img {
+    width: 80px;
+    height: 80px;
+}
+
+/*
+タイマー用モーダル（やっぱり無くす予定）
+*/
+#modal-timer {
+    width: 80vw;
+    height: 25vh;
+    max-width: 500px;
+    z-index: 9999;
+    position: fixed;
+    inset: 0;
+    margin: 35vh auto;
+    /* padding: 1rem; */
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    text-align: center;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+}
+#modal-timer >.notice {
+    height: 80%;
+    position: relative;
+}
+.notice p{
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+}
+#modal-timer >.btn-wrapper {
+    height: 20%;
+}
+
+/* 
+モーダルウィンドウ cooking
+*/
+#modal-cooking {
+    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+    position: fixed;
+    inset: 0;
+    width: 80vw;
+    max-width: 500px;
+    max-height: 20vh;
+    margin: 20rem auto;
+    padding: 3rem 0 0;
+    border-radius: 1rem;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+}
+#mask-cooking {
+    background-color: rgba(0, 0, 0, .75);
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+}
+#modal-cooking button {
+    width: 49%;
+    background-color: transparent;
+    color: #333;
+    border-radius: 0px;
+    padding: 1rem;
+}
+#modal-cooking button.btn-back{
+    border-right: rgba(161, 161, 161, .3) 6px solid
+}
+/* #modal-cooking button.btn-next{
+    border-left: #aaa 3px solid
+} */
+.btn-container {
+    height: 100%;
+    position: relative;
+}
+#modal-cooking form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: rgba(161, 161, 161, .3) 6px solid;
+}

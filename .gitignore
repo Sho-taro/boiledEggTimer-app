@@ -17,3 +17,9 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+Dockerfile
+php.ini
+start-container
+supervisord.conf
+index.blade copy.php
+memo
