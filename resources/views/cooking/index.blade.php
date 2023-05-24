@@ -70,8 +70,8 @@
                 <p>別ページに移動し、タイマーが自動でスタートします。</p>
             </div>
             <div class="absolute bottom-0 w-full border-t flex justify-around">
-                <button class="btn-back block px-20 py-4 border-r" type="button" style="color: skyblue">戻る</button>
-                <button class="btn-next block px-20 py-4" type="button" style="color: skyblue"><a href="{{ route('timer.index') }}">OK!</a></button>
+                <button class="btn-back block px-20 py-4 border-r hover:bg-gray-100" type="button" style="color: skyblue">戻る</button>
+                <button class="btn-next block hover:bg-gray-100" type="button" style="color: skyblue"><a href="{{ route('timer.index') }}" class="px-20 py-4">OK!</a></button>
             </div>
         </div>
     </section>
