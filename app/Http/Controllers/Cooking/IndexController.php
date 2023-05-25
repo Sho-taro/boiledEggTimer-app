@@ -1,25 +1,25 @@
 <?php
 namespace App\Http\Controllers\Cooking;
 
-// require_once '/php/eggInfo.php';
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Cooking\CookingRequest;
+use App\Services\EggInfoService;
+use App\Models\EggInfo;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
     /**
      * Handle the incoming request.
      */
-    public function __invoke(CookingRequest $request)
+    public function __invoke(CookingRequest $request, EggInfoService $eggInfoService)
     {
         $eggType = $request->eggType();
         $eggNum = $request->eggNum();
 
         // 選択されたタイプのゆでたまごの情報をDBから取得
-        $eggInfo = DB::table('egginfo')->where('eggType', $eggType)->first();
+        $eggInfo = $eggInfoService->getEggInfo($eggType);
 
         // 各カラムの値を取得
         $eggType = $eggInfo->eggType;
@@ -29,8 +29,8 @@ class IndexController extends Controller
         $numCounter = (int)$eggInfo->numCounter;
 
         // セッションにデータを保存
-        $request->session()->put('eggType', $eggType);
-        $request->session()->put('eggNum', $eggNum);
+        $request->session()->put('eggType', $eggType);  // ユーザーに選択されたtype
+        $request->session()->put('eggNum', $eggNum);   // ユーザーに選択された個数
         $request->session()->put('eggName', $eggName);
         $request->session()->put('imgPath', $imgPath);
         $request->session()->put('boilMiliSec', $boilMiliSec);
