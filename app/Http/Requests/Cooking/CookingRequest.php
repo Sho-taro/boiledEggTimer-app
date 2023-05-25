@@ -22,8 +22,8 @@ class CookingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            // 'egg_type' => 'required',
-            'egg_num' => 'required',
+            'egg_type' => 'required',
+            'egg_num' => 'required|integer|between:1,6',
         ];
     }
 
@@ -34,6 +34,6 @@ class CookingRequest extends FormRequest
 
     public function eggNum(): int
     {
-        return (int)$this->input('egg_num');
+        return $this->input('egg_num');
     }
 }

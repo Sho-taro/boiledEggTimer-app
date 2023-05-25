@@ -7,6 +7,9 @@
         <x-header>
         </x-header>
         <div class="text-center mb-10 text-xl">
+            @error('egg_num')
+                <p style="color:red;" class="mb-4">※ 作る個数が未選択です</p>
+            @enderror
             <h2>お好みの固さを選択して下さい</h2>
             <p>(画像をクリック)</p>
         </div>
@@ -53,7 +56,7 @@
         </div>
         <form action="{{ route('cooking.index') }}" method="POST">
             @csrf
-            <input type="hidden" name="egg_type" value="type3">
+            <input type="hidden" name="egg_type" value="">
             <span>作る個数: </span>
             <select class="mb-8" name="egg_num" id="egg_num">
                 <option value="unselected" selected>選択して下さい</option>
